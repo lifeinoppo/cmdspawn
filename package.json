@@ -1,0 +1,26 @@
+{
+  "name": "cmdspawn",
+  "version": "1.0.0",
+  "description": "Promise based command spawner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srcspider/cmdspawn"
+  },
+  "keywords": [
+    "cmd"
+  ],
+  "author": "srcspider <source.spider@gmail.com>",
+  "license": "BSD-2",
+  "bugs": {
+    "url": "https://github.com/srcspider/cmdspawn/issues"
+  },
+  "homepage": "https://github.com/srcspider/cmdspawn",
+  "dependencies": {
+    "bluebird": "^2.5.3",
+    "typelib": "^1.0.1"
+  }
+}
