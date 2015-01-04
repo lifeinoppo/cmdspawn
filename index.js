@@ -33,11 +33,11 @@ var cmdspawn = function (conf) {
 			var instance = process.spawn(command, instructions);
 
 			instance.stdout.on('data', function (output) {
-				console.log(output);
+				console.log(output.toString());
 			});
 
 			instance.stderr.on('data', function (err) {
-				console.log(err);
+				console.log(err.toString());
 			});
 
 			instance.on('close', function (code) {
@@ -66,10 +66,14 @@ var cmdspawn = function (conf) {
 		};
 	};
 
+	cmd.noop = function () {};
+
 	return cmd;
 }
 
-// export bluebird promise implementation in use
-cmdspawn.Promise = Promise;
+// export dependencies
+cmdspawn.lib = {
+	bluebird: Promise
+}
 
 module.exports = cmdspawn;
