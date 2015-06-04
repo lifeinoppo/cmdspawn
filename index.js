@@ -1,5 +1,5 @@
 var process = require('child_process');
-var Promise = require('bluebird');
+var Promise = require('lie');
 var type = require('typelib');
 
 var defaults = {
@@ -73,7 +73,7 @@ var cmdspawn = function (conf) {
 
 // export dependencies
 cmdspawn.lib = {
-	bluebird: Promise
+	Promise: Promise
 }
 
 module.exports = cmdspawn;
